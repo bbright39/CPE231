@@ -21,7 +21,6 @@ void convert_tentotwo(int base_input,int two,char in_put[])
     int length_strbase,i,j,intin_put,k=0,n;
     char zero_1[] = "0",str64[64]="",str1[64],x2[10];
     length_strbase = strlen(in_put);
-
     intin_put = atoi(in_put);
     int x = intin_put;
     if (x<0)
@@ -30,15 +29,6 @@ void convert_tentotwo(int base_input,int two,char in_put[])
         n=n+1;
     }
     itoa(x,x2,10);
-    //int n = 64 - length_strbase;
-    /*
-    for( i = 0; i<n ;i++)
-    {
-            strcat(str64,zero_1);
-    }
-    strcat(str64,x2);
-    printf("base 10 in 64 : %s\n",str64);
-    */
     int result_divide = x;
     int fraction[64],result_fraction[64],cout=0;
     do
@@ -67,7 +57,6 @@ void convert_tentotwo(int base_input,int two,char in_put[])
         }
     if(intin_put>0)
         printf("base 2 in 64  : %s",str64);
-       // printf("strlen : %d",strlen(str64));
     if (intin_put == 0)
     {
         printf("base-2 : \n");
@@ -78,7 +67,6 @@ void convert_tentotwo(int base_input,int two,char in_put[])
     }
     else if(intin_put<0)
     {
-        //printf("base 2 in 64  : %s",str64);
         for(i=0; i<strlen(str64);i++)
         {
             if(str64[i]=='0')
@@ -90,7 +78,6 @@ void convert_tentotwo(int base_input,int two,char in_put[])
                 str64[i]='0';
             }
         }
-        //printf("\ntrans : %s",str64);
         if(str64[63]=='0')
         {
             str64[63] = '1';
@@ -108,7 +95,6 @@ void convert_tentotwo(int base_input,int two,char in_put[])
             }
         }
         printf("\nbase 2 in 64  : %s",str64);
-        //printf("strlen : %d",strlen(str64));
     }
 }
 
